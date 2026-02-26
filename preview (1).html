@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1048/1048953.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ansh Singh | Professional Web Designer & Programmer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d0d15;
+color:white;
+overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+nav h2{
+font-weight:900;
+letter-spacing:1px;
+background:linear-gradient(45deg,#00f5ff,#ff00c8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00f5ff;
+}
+
+/* ===== HERO ===== */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+background:radial-gradient(circle at 20% 20%,#1a1a2e,#0d0d15 60%);
+position:relative;
+overflow:hidden;
+}
+
+.hero::before,
+.hero::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+filter:blur(120px);
+opacity:.4;
+}
+
+.hero::before{
+background:#00f5ff;
+top:-100px;
+left:-100px;
+}
+
+.hero::after{
+background:#ff00c8;
+bottom:-100px;
+right:-100px;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.hero span{
+background:linear-gradient(45deg,#00f5ff,#ff00c8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+opacity:.85;
+font-size:1.2rem;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* ===== ELEGANT BUTTON STYLE ===== */
+.btn{
+display:inline-block;
+padding:14px 38px;
+border-radius:50px;
+font-weight:600;
+background:linear-gradient(45deg,#00f5ff,#ff00c8);
+color:white;
+text-decoration:none;
+border:none;
+cursor:pointer;
+transition:.3s ease;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== SECTION ===== */
+section{
+padding:120px 10%;
+}
+
+section h2{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+}
+
+/* ===== ABOUT ===== */
+.about p{
+max-width:900px;
+margin:auto;
+text-align:center;
+opacity:.85;
+line-height:1.9;
+font-size:1.1rem;
+}
+
+/* ===== SKILLS ===== */
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+padding:50px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+transition:.4s ease;
+transform:scale(0.9);
+opacity:0;
+}
+
+.skill-card:hover{
+transform:scale(1.05);
+}
+
+/* ===== CONTACT ===== */
+.contact{
+text-align:center;
+}
+
+form{
+max-width:600px;
+margin:40px auto 0;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,textarea{
+padding:15px;
+border-radius:10px;
+border:none;
+background:#1b1b2f;
+color:white;
+}
+
+textarea{ resize:none; }
+
+footer{
+text-align:center;
+padding:30px;
+background:black;
+opacity:.7;
+}
+
+/* ===== POP-UP SCROLL ANIMATION ===== */
+.fade-up{
+opacity:0;
+transform:translateY(60px) scale(0.95);
+transition:all 0.8s ease;
+}
+
+.fade-up.active{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{ font-size:2.5rem; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Ansh Singh</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content fade-up">
+<h1>I’m <span>Ansh Singh</span></h1>
+<p>
+Professional Web Designer & Programmer with a strong Computer Science foundation.
+I build scalable, high-performance and visually premium digital solutions
+that create impact, authority and measurable business results.
+</p>
+<a href="#about" class="btn">Know More</a>
+</div>
+</section>
+
+<section id="about" class="about fade-up">
+<h2>About Me</h2>
+<p>
+I specialize in crafting modern web experiences that combine design precision with programming logic.
+My expertise spans HTML, CSS, JavaScript, Python and Java.
+Every project I build focuses on performance, responsiveness, scalability
+and delivering strong digital presence for brands and businesses.
+</p>
+</section>
+
+<section id="skills">
+<h2 class="fade-up">Technical Expertise</h2>
+<div class="skills-container">
+<div class="skill-card">HTML5 – Advanced Semantic Architecture</div>
+<div class="skill-card">CSS3 – Premium UI & Animations</div>
+<div class="skill-card">JavaScript – Dynamic Web Applications</div>
+<div class="skill-card">Python – Backend & Automation</div>
+<div class="skill-card">Java – OOP & Application Logic</div>
+<div class="skill-card">Responsive Design – Mobile First</div>
+</div>
+</section>
+
+<section id="contact" class="contact fade-up">
+<h2>Let’s Build Something Powerful</h2>
+<a href="mailto:ansh7224@outlook.com" class="btn">Send Email</a>
+</section>
+
+<footer>
+© 2026 Elite Gym. Designed & Developed by Ansh.
+</footer>
+
+<script>
+/* SCROLL POP-UP ANIMATION */
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+},{threshold:0.2});
+
+document.querySelectorAll(".fade-up, .skill-card").forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
